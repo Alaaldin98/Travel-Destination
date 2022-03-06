@@ -1,13 +1,17 @@
+import React from "react";
 
-function StudentInfo(props){
-    // console.log(props);
+import Tours from "../tours/Tours";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
+
+function Home(data){
     return (
-        <div>
-            <h1>Student Name: {props.studentName} </h1>
-            <p> Student Age: {props.studentAge} </p>
-            <img style={{width:"350px"}} src={props.studentAvatar} alt="Student Avater" />
-        </div>
+    <>
+    <Header/>
+    <Tours data={data}/>
+    <Footer/>
+    </>
     )
 };
 
-export default StudentInfo;
+export default Home;

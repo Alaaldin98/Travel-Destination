@@ -1,23 +1,16 @@
-const Memes = (props) =>{
-    return(
-        <>
-        {
-            props.memes.map(meme => {
-                return(
-                    <div>
-                        <img src={meme.image} alt="" />
-                        <h3>{meme.name}</h3>
-                        <p>{meme.bottomText}</p>
-                        <p>{meme.rank}</p>
-                    </div>
-                )
-                
-            })
-        }
-        </>
-        
-        
+import React from "react";
+const Tours = ({ data }) => {
+    return (
+        <div>
+            {
+                data.map((element, index) => {
+                    return (
+                        <div key={index}><h3>{element.name}</h3>
+                            <img src={element.image} alt="" /></div>
+                    )
+                })
+            }
+        </div>
     )
 };
-
-export default Memes;
+export default Tours;
