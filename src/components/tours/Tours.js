@@ -2,15 +2,18 @@ import React from "react";
 const Tours = ({ data }) => {
     return (
         <div>
-            {
-                data.map((element, index) => {
-                    return (
-                        <div key={index}><h3>{element.name}</h3>
-                            <img src={element.image} alt="" /></div>
+ {
+        data.map((ele => {
+            return (
+            <>
+                    <div className="child-div">
+                        <Tour data={ele} />
+                    </div>
+            </>
                     )
                 })
+                )
             }
         </div>
     )
-};
-export default Tours;
+};export default Tours;
